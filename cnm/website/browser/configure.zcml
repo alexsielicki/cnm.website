@@ -1,0 +1,61 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="cnm.website">
+
+    <browser:page
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        name="mu-76a5e606-d18cad58-f11e229f-019fc72e"
+        class=".blitz.BlitzVerify"
+        permission="zope2.View"
+        />
+
+    <browser:page
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        name="cnmanalytics-controlpanel"
+        class=".controlpanel.ControlPanelForm"
+        permission="plone.app.controlpanel.Overview"
+        />
+
+    <browser:page
+        for="cnm.website.content.homepage.IHomepage"
+        name="index.html"
+        class=".homepage.Homepage"
+        permission="zope2.View"
+        />
+
+    <browser:page
+        for="*"
+        name="emergency_message.json"
+        class=".emergency.EmergencyMessage"
+        attribute="message"
+        permission="zope2.View"
+        />
+
+    <browser:page
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        name="oauth2callback"
+        class=".auth.OAuth2"
+        permission="plone.app.controlpanel.Overview"
+        />
+
+    <browser:page
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        name="official-news.rss"
+        class=".rss.OfficialNewsItemsRSS"
+        permission="zope2.View"
+        />
+
+    <browser:page
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        name="news.rss"
+        class=".rss.AllNewsItemsRSS"
+        permission="zope2.View"
+        />
+
+    <browser:resourceDirectory
+        name="cnm"
+        directory="resources"
+        />
+
+</configure>

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<contentrules>
+ <rule name="rule-1" title="Pending Review Notification" description=""
+    enabled="True" event="Products.CMFCore.interfaces.IActionSucceededEvent"
+    stop-after="False">
+  <conditions>
+   <condition type="plone.conditions.WorkflowTransition">
+    <property name="wf_transitions">
+     <element>submit</element>
+    </property>
+   </condition>
+  </conditions>
+  <actions>
+   <action type="plone.actions.MailRole">
+    <property name="source"/>
+    <property name="role">Reviewer</property>
+    <property name="global_roles">True</property>
+    <property name="acquired">True</property>
+    <property
+       name="message">There is a new content item pending your review.  You can access this content by logging into the website and visiting the following URL:
+     
+     ${url}</property>
+    <property name="subject">New Content Item is Pending Review </property>
+   </action>
+  </actions>
+ </rule>
+ <rule name="rule-2" title="Rejection Notification" description=""
+    enabled="True" event="Products.CMFCore.interfaces.IActionSucceededEvent"
+    stop-after="False">
+  <conditions>
+   <condition type="plone.conditions.WorkflowTransition">
+    <property name="wf_transitions">
+     <element>reject</element>
+    </property>
+   </condition>
+  </conditions>
+  <actions>
+   <action type="plone.actions.MailRole">
+    <property name="source"/>
+    <property name="role">Owner</property>
+    <property name="global_roles">False</property>
+    <property name="acquired">False</property>
+    <property
+       name="message">An item you submitted for review has not been approved.  You can access this content by logging into the website and visiting the following URL:
+     
+     ${url}</property>
+    <property name="subject">Item has not been accepted</property>
+   </action>
+  </actions>
+ </rule>
+ <rule name="rule-3" title="Submit for Deletion Notification" description=""
+    enabled="True" event="Products.CMFCore.interfaces.IActionSucceededEvent"
+    stop-after="False">
+  <conditions>
+   <condition type="plone.conditions.WorkflowTransition">
+    <property name="wf_transitions">
+     <element>submit-for-deletion</element>
+    </property>
+   </condition>
+  </conditions>
+  <actions>
+   <action type="plone.actions.MailRole">
+    <property name="source"/>
+    <property name="role">Reviewer</property>
+    <property name="global_roles">True</property>
+    <property name="acquired">True</property>
+    <property
+       name="message">There is a content item pending deletion.  You can access this content by logging into the website and visiting the following URL:
+     
+     ${url}</property>
+    <property name="subject">Content Item is Pending Deletion</property>
+   </action>
+  </actions>
+ </rule>
+ <assignment name="rule-1" bubbles="True" enabled="True" location=""/>
+ <assignment name="rule-2" bubbles="True" enabled="True" location=""/>
+ <assignment name="rule-3" bubbles="True" enabled="True" location=""/>
+</contentrules>

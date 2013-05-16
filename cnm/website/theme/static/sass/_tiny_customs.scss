@@ -1,0 +1,91 @@
+h4 {
+  font-size: 1.125em;
+}
+@mixin rightcolumn {
+  float: right;
+  clear: right;
+  width: 200px;
+  color: #76797C;
+  font-weight: normal;
+  border-left: 0px solid #76797C;
+}
+
+@mixin highlightbox {
+    background-color: #e0debf;
+}
+
+.rightcolumn,
+.pullquote {
+  @include rightcolumn;  
+  padding: 10px;
+  margin: 30px 0px 30px 15px;
+}
+
+.highlightbox {
+  @include highlightbox;
+  padding: 15px;
+  margin: 0.75em 0;
+}
+
+.rightcolumn-highlight {
+  @include rightcolumn;
+  @include highlightbox;
+  padding: 10px;
+  margin: 30px 0px 30px 30px;
+}
+
+.agate {
+  font-size: .75em;
+}
+.pullquoteOriginal {
+    background-color:White;
+    border-left:4px solid #8CACBB;
+    clear:right;
+    color:#CC9933;
+    float:right;
+    font-weight:bold;
+    margin:0 0 1em 1em;
+    padding:0 1em;
+    width:35%;
+}
+
+ul.no_decoration {
+  list-style: none;
+}
+
+@mixin column {
+  float: left;
+  padding: 0 5px;
+}
+
+div.two_column {
+  @include column;
+  width: 45%;
+}
+
+div.three_column {
+  @include column;
+  width: 30%;
+}
+
+table.listing th, .stx table th {
+background-color: #E0DEBF;
+border-top-color: #999;
+border-bottom-color: #999;
+border-right-color: #999;
+border-left-color: #999;
+text-transform: none;
+}
+table.listing {
+  border-top-color: #999;
+  border-left-color: #999;
+  border-right-color: #999;
+  border-bottom-color: #999;
+}
+table.listing td {
+  border-top-color: #999;
+  border-left-color: #999;
+  border-right-color: #999;
+  border-bottom-color: #999;
+}
+img.no-frame {border: none !important;}

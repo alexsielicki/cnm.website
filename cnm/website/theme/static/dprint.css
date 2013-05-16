@@ -1,0 +1,7 @@
+#header,
+#footer,
+#portal-column-one,
+#portal-column-two{display:none;}
+div.position-1\:4 {
+    margin-left: 0!important;
+}

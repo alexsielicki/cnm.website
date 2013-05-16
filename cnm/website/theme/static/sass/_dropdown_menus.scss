@@ -1,0 +1,100 @@
+/* Dropdown styles */
+@media screen {
+#portal-top {
+  z-index:1;
+}
+
+#portal-globalnav {
+    background: none;
+    margin: 0 0 0 2.75em;
+    padding: 0.6em 0 1.5em 0;
+    color: $dark-blue; 
+    font-weight: bold;
+    font-size: 1.5em;
+    list-style-image:none;
+    position:relative; /* fix ie */
+    zoom:1; /* fix ie */
+    z-index: 999;
+
+    &:after {
+        content:"";
+        clear:both;
+        display:block;
+        visibility:hidden;
+    }
+    
+    a {
+        &:hover, &.selected {
+            background: #205C90;
+            color: white;
+        }
+    }
+    ul {
+        padding-top: 0; text-align: center;
+        
+        &.submenu {
+            display:none;
+            left:0;
+            position:absolute;
+            top:100%;
+            
+            li {
+                font-size: 0.65em;
+                float:none;
+                margin:0;
+                a {
+                    padding:0.5em 1.5em 0.5em 1em;
+                    width:12em;    
+                }
+            }
+
+            ul {
+                display: none;    
+            }    
+        }
+    }
+    
+    li {
+        float:left;
+        position:relative;
+
+        a {
+            color: $dark-blue; 
+            border: 1px solid $dark-blue; 
+            background: $freaking-yellow; 
+            margin: 0 -3px;
+            padding: 0.4em 0.8em; 
+            text-decoration: none;
+            float: left;
+            display:block;
+            min-width: 0;
+        }
+        &:hover > ul.submenu {
+            display: block;
+        }
+    }
+    #portaltab-index_html {
+        a {
+            background: $freaking-yellow url("home-ico.png") no-repeat 4px 6px;
+            padding-left: 0;
+            padding-right: 0;
+            text-indent: -1000em;
+            width: 40px;
+        } 
+    }
+    ul.submenu { 
+        a {
+            background: $freaking-yellow;
+            color: $dark-blue;
+            
+            &:hover {
+                color: #FFF;
+                background: #205C90;
+            }
+        }
+    }
+    .hasDropDown + ul {
+        display: none !important;
+    }
+}
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<head>
+
+    <!-- content -->
+    
+    <title>Page Title</title>
+    
+    <!-- icons -->
+    <meta property="og:title" content="Central New Mexico Community College"/>
+    <meta property="og:description" content="Central New Mexico Community College, serving over 30,000 students!"/>
+    <meta property="og:image" content="http://www.cnm.edu/++theme++cnm.website/static/cnm-logo-light-background.png"/>
+    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon" />
+    <link rel="image_src" href="/++theme++cnm.website/static/cnm-logo-light-background.png" />
+    <!-- font styles -->
+   <style type="text/css">
+   @import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,800italic,400,800,300,700&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic");
+    </style>
+    <!-- styles -->
+    <link type="text/css" rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" media="print" href="static/dprint.css" type="text/css">
+  <script language="JavaScript" SRC="static/function.js"></script> 
+  <script language="JavaScript" src="static/redmine_issue.js"></script>
+  <!-- mobile -->
+  <meta name="viewport" content="width=device-width"/>
+  <!--Covers all devices with screens 768px WIDE or less, which is iPhones, iPads (even retinas), etc.
+      But this excludes desktops even at 800x600 resolution.-->
+  <link media="only screen and (max-device-width : 768px)" name="mobile" href="static/mobile.css" type="text/css" rel="stylesheet" />
+<body>
+    <script language="JavaScript">
+    (function() {
+     BM.load("http://www.flickr.com/badge_code_v2.gne?count=1&display=random&size=m&layout=h&context=in%2Fpool-cnmonline%2F&source=group&group=1630996%40N20", null); 
+     jq(document).ready(function() {
+         BM.emergency();
+         BM.columnglue();
+         });
+     })();
+     $(document).ready(function(){
+        if(document.cookie.indexOf('no-mobile-please') > -1){
+            $("link[name='mobile']").remove();
+            $("a.mobile_switch").removeClass("hide_from_full");
+            $("a.mobile_switch").text("Mobile Site");
+            $("a.mobile_switch").click(function(){
+                document.cookie = 'no-mobile-please=; expires=Thu, 01-Jan-70 00:00:01 GMT;';
+                document.location = "/";
+                return false;
+            });
+        } else {
+            $("a.mobile_switch").click(function(){
+                var expiry=new Date();
+                expiry.setDate(expiry.getDate() + 7);
+                var cookie_value=escape('true') + ((expiry==null) ? "" : "; expires="+expiry.toUTCString());
+                document.cookie="no-mobile-please=" + cookie_value;
+                document.location = "/";
+                return false;
+            });
+        }
+    });
+    </script>
+
+    <div id="emergency-container">
+     <!-- Load alert content -->
+    </div>
+
+<div id="main-wrapper">
+
+    <!-- Accessibility -->
+    <div id="accessibility"> </div>
+    
+    <!-- User -->
+    <div id="user">
+        <ul>
+            <li><a href="#" title="Login">Login</a></li>
+        </ul>
+    </div>
+
+    <div id="wrapper">
+
+    <!-- Header -->
+        <div id="header" role="banner">
+
+        <div id="siteactions">
+            <ul id="portal-siteactions">
+                <li id="siteaction-chat-now"><a title="Contact CNM" accesskey="" href="/contact/">Contact CNM</a></li>
+                <li id="siteaction-mycnm"><a title="myCNM" accesskey="" href="http://my.cnm.edu" target="_blank">myCNM</a></li>
+                <li id="siteaction-distance-learning"><a title="Blackboard login Distance Learning" accesskey="" href="http://cnm.blackboard.com" target="_blank">Blackboard</a></li>
+            </ul>
+        </div>
+        
+        
+            <div id="logo">
+                <a href="#" title="#"><img src="static/cnm-logo.png" alt="Portal Title" /></a>
+            </div>
+            
+    <!-- Search -->
+            <div id="search" role="search">
+                <form>search</form>
+            </div>
+            
+            <div class="clear"> </div>
+            
+    <!-- Main Menu -->
+            <div id="searchbt"><a>search</a></div>
+            <div id="nav" role="navigation">
+                <span id="seletor" onclick="void(0)">Sections</span>
+
+            </div>
+		</div>
+
+    <!-- Columns -->    
+        <div id="main" role="main">
+        
+            <div id="content"> 
+            
+
+            <!-- Homepage News Item -->
+            <div class="frontpage-news">
+                <p><img class="image-left" src="static/no-image-placeholder.gif" /></p>
+                <h2><a href="Members">Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit.</a></h2>
+                <img src="static/breaking-news.png" />
+                <p>Fusce sit amet  molestie leurabitur mattis est eget velit vehicula
+                in tincidunt diam  bibendum teger dictum venenatis tempusn vel orci
+                erat.</p>
+                <p class="read-more"><a href="news">Read More</a></p>
+                <div class="clear"> </div>
+            </div>
+
+            <!-- Home View All News -->
+            <p class="read-more"><a href="news">View all CNM News</a></p>
+
+            <!-- Most Popular box -->
+            <div id="popular">
+                <h3>Most Popular Now</h3>
+                <ul>
+                    <li><a href="#">Welcome Back Days</a></li>
+                    <li><a href="#">Welcome Back Days</a></li>
+                    <li><a href="#">Welcome Days</a></li>
+                    <li><a href="#">Welcome Back Days</a></li>
+                    <li><a href="#">Days</a></li>
+                    <li><a href="#">Welcome Back Days</a></li>
+                    <li><a href="#">Welcome Back Days</a></li>
+                    <li><a href="#">Welcome Back Days</a></li>
+                </ul>
+                <div class="clear"> </div>
+            </div>
+
+
+            </div>
+
+
+
+            </div>
+            <div class="clear"> </div>
+
+        </div>
+        
+    </div>
+
+    <!-- Socials -->    
+
+    <div id="social">
+        <ul>
+        <li id="facebook"><a href="http://facebook.com/cnmonline" target="_blank">Facebook</a></li>
+        <li id="twitter"><a href="http://twitter.com/cnmonline" target="_blank">Twitter</a></li>
+        <li id="flickr"><a href="http://www.flickr.com/groups/cnmonline/" target="_blank">Flickr</a></li>
+        <li id="youtube"><a href="http://www.youtube.com/cnmonline" target="_blank">Youtube</a></li>
+        </ul>
+    </div>
+
+    <!-- Footer --> 
+
+<div id="footer" role="contentinfo">
+
+    <div id="footerlinks">
+
+        <div class="community-links">
+            <h3><a href="/cnm-community/">Community</a></h3>
+            <ul>
+                <li><a href="/about/strategic-direction">Strategic Direction</a></li>
+                <li><a href="/cnm-community/parent-guide"> Parent Guide to CNM </a></li>
+                <li><a href="/depts/wtc"> Workforce Training Center </a></li>
+                <li><a href="/depts/taxhelp"> Tax Help NM </a></li>
+                <li><a href="/depts/purchasing"> Purchasing </a></li>
+                <li><a href="/depts/foundation">Give to CNM</a></li>
+                <li><a href="/depts/marketing/forms/idea-box">Idea Box</a></li>
+            </ul>
+        </div>
+
+        <div class="faculty-links">
+            <h3><a href="/faculty-and-staff/">Faculty &amp; Staff</a></h3>
+            <ul>
+                <li><a href="http://directory.cnm.edu">Employee Directory</a></li>
+                <li><a href="/faculty-and-staff/">Staff &amp; Faculty Resources </a></li>
+                <li><a href="/depts/">Departments</a></li>
+                <li><a href="https://webmail.cnm.edu">Employee Email</a></li>
+                <li><a href="/depts/its">ITS Service Desk</a></li>
+                <li><a href="/launch/forms/web-issue-report">Report a Website Problem</a></li>
+            </ul>
+        </div>
+
+        <div class="newsmedia-links">
+            <h3><a href="/media/">News Media</a></h3>
+            <ul>
+                <li><a href="/media/public-records-request">Public Records Request</a></li>
+                <li><a href="/about/college-information">CNM Facts</a></li>
+                <li><a href="/media/media-contact">Media Contacts</a></li>
+                <li><a href="/news">News Releases</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+    <div>
+        <ul class="tabs">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        </ul>
+
+        <div class="flickr_badge_wrapper" id="flickr_badge_wrapper"></div>
+
+        <!-- End of Flickr Badge -->
+        <p id="infophotos">
+        <a href="http://www.flickr.com/groups/cnmonline/">View Community Photos</a> | <a href="/cnm-community/cnm-flickr-photo-pool"> Add Yours</a>
+        </p>
+
+        <div class="clear"> </div>
+           <a href="/login_form"><img src="static/cnm-logo-footer.png" id="logo-footer"></a>
+            <p class="footer-about">
+                <a href="/disable-mobile" class="mobile_switch hide_from_full">Full Site</a>
+                <a href="/depts/ppo/tchusmen.html">IT Use Policy</a>
+                <a href="/about">About CNM</a>
+                <a href="/contact">Contact Us</a>
+            </p>
+ 
+            <p class="footer-copyright">&copy; 2012 Central New Mexico Community College</p>
+            <p class="footer-adress">525 Buena Vista Dr. SE, Albuquerque, NM 87106 | (505) 224-3000</p>
+            <div class="clear"> </div>
+        </div>
+    </div>
+</div>
+</div>
+<div id="issue_container">
+
+</div> 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2410636-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/3587.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+<noscript>No script</noscript>
+</body>
+</html>

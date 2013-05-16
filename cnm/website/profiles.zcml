@@ -1,0 +1,39 @@
+<configure
+    xmlns="http://namespaces.zope.org/genericsetup">
+
+    <registerProfile
+        name="default"
+        title="CNM website"
+        description="Extension profile for CNM website."
+        directory="profiles/default"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <importStep
+        name="cnm.website.various"
+        title="CNM Website: miscellaneous import steps"
+        description="Various import steps that are not handled by GS import/export handlers."
+        handler=".setuphandlers.setupVarious">
+        <depends name="uwosh.simpleemergency-postInstall" />
+        <depends name="actions" />
+    </importStep>
+
+    <upgradeStep
+        title="Upgrade cnm.website default profile to version 2"
+        description="Upgrade cnm.website default profile to version 2"
+        source="1"
+        destination="2"
+        handler=".upgradehandlers.upgrade_default_from_1_to_2"
+        profile="cnm.website:default"
+        />
+
+    <upgradeStep
+        title="Upgrade cnm.website default profile to version 3"
+        description="Upgrade cnm.website default profile to version 3"
+        source="2"
+        destination="3"
+        handler=".upgradehandlers.upgrade_default_from_2_to_3"
+        profile="cnm.website:default"
+        />
+
+</configure>

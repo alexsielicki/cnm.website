@@ -1,0 +1,31 @@
+Heading|h2
+Subheading|h3
+Subheading 2|h4
+Subheading 3|h5
+Discreet|p|discreet
+Pull-quote|blockquote|pullquote
+Call-out|p|callout
+Clear right column|div|rightcolumn
+Highlight box|div|highlightbox
+Table Heading cell|th|
+List Disc|ul|listTypeDisc
+List Square|ul|listTypeSquare
+List Circle|ul|listTypeCircle
+List No Decoration|ul|no_decoration
+Numbers|ol|listTypeDecimal
+Lower Alpha|ol|listTypeLowerAlpha
+Upper Alpha|ol|listTypeUpperAlpha
+Lower Roman|ol|listTypeLowerRoman
+Upper Roman|ol|listTypeUpperRoman
+Definition term|dt
+Definition description|dd
+Odd row|tr|odd
+Even row|tr|even
+Heading cell|th|
+Page break (print only)|div|pageBreak
+Clear floats|div|visualClear
+Embedly link|a|embedlylink
+Agate|p|agate
+Two Column|div|two_column
+Three Column|div|three_column
+Image No-Frame|img|no-frame

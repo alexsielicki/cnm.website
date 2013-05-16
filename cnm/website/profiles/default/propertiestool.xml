@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_properties" meta_type="Plone Properties Tool">
+    <object name="site_properties" meta_type="Plone Property Sheet">
+        <property name="disable_folder_sections" type="boolean">True</property>
+    </object>
+    <object name="uwosh_simpleemergency_properties" meta_type="Plone Property Sheet">
+        <property name="display_emergency" type="boolean">False</property>
+    </object>
+</object>

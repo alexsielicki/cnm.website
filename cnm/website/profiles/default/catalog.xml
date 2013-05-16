@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_catalog" meta_type="Plone Catalog Tool">
+  <index name="news_priority" meta_type="KeywordIndex">
+    <indexed_attr value="news_priority" />
+  </index>
+  <index name="historical_news_priority" meta_type="KeywordIndex">
+    <indexed_attr value="historical_news_priority" />
+  </index>
+</object>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<metadata>
+    <version>3</version>
+    <dependencies>
+        <dependency>profile-Products.PloneFormGen:default</dependency>
+        <dependency>profile-Products.RedirectionTool:default</dependency>
+        <dependency>profile-collective.plonetruegallery:default</dependency>
+        <dependency>profile-collective.embedly:default</dependency>
+        <dependency>profile-Products.ImageEditor:default</dependency>
+        <dependency>profile-plone.app.dexterity:default</dependency>
+        <dependency>profile-uwosh.simpleemergency:default</dependency>
+        <dependency>profile-plone.app.iterate:plone.app.iterate</dependency>
+        <dependency>profile-plone.app.theming:default</dependency>
+        <dependency>profile-Products.OpenXml:default</dependency>
+    </dependencies>
+</metadata>

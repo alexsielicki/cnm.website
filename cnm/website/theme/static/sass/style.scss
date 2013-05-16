@@ -1,0 +1,354 @@
+//  To get this started.
+//  gem install sass
+//  sass --watch style.scss:../style.css
+//  
+//  Remember you'll have to commit style.css as well.
+/* DO NOT edit style.css directly. Edit sass/style.scss */
+/* reset */
+* {margin:0; padding:0; list-style:none; vertical-align:baseline;}
+
+// Color Scheme //
+$white: #ffffff;
+$black: #000000;
+$dark-blue: #004890;
+$light-blue: #c7d4df;
+$freaking-yellow: #FBD10B;
+
+/************** Responsive Diazo Magic ************************/
+
+/* Background images */
+body {background: $white;}
+#main-wrapper {background: $white url(bg.jpg) top right no-repeat;}
+#header {background: transparent;}
+
+/*Columns*/
+
+div {
+    .width-3\3a 4 { width: 70%; } 
+    .width-1\3a 2 { width: 42%; }
+    .width-1\3a 4 { width: 28%; } 
+    .position-1\3a 4 { margin-left: -70%; }
+    .position-3\3a 4 { margin-left: -28%; }
+} 
+
+#portal-column-one {padding-bottom:50px;}
+.portaltype-homepage #portal-breadcrumbs {display: none;}
+#portal-breadcrumbs {
+    span {
+        margin-left:1px;
+    }
+}
+.breadcrumbSeparator {
+    display: inline-block;
+    margin-left: 1px;
+}
+/* Portlets */
+dl.portletRss {
+    dd.portletFooter, dd.portletItem {
+        padding: 5px;
+    }
+}
+/* Colors and fonts */
+body {color: $black; font-family: 'Open Sans', sans-serif; font-size: 62.5%;}
+a:link, a:visited, #content a:link, dl.portlet a:link, 
+dl.portlet dt a:link, dl.portlet dt a:visited, dl.portlet dt a:hover {color:$dark-blue;}
+
+#content {
+    a:link {text-decoration: underline;}
+    a:hover, dl.portlet a:hover {color:$dark-blue !important;}
+    li, dl.portlet li {
+        display: list-item;
+        line-height: 1.5em;
+        list-style: square outside;
+        margin-bottom: 0.25em;    
+    }
+    ol li, dl.portlet ol li {list-style: decimal outside;}
+    .documentDescription {
+        font-size: 1.0em;
+    }    
+} 
+
+dl.portlet a:link {border-bottom: none;}
+h1, h2, h3, h4, h5, h6 {font-family: Arial, Helvetica, sans-serif;}
+h1 {color: $dark-blue;}
+h2, h3, h4, h5, h6 {color: $dark-blue;}
+#wrapper { width:960px; margin: 0 auto; font-size: 1.1em;}
+#main {background:#fff; font-size: 1.3em; padding: 1em 0 0 0;}
+
+#portal-searchbox {
+    input[name="q"], #searchGadget {
+        border-width: 1px;
+        border-style: solid;
+        border-color: #597a97;    
+    }
+    .searchButton {
+        background:#636466;
+        color: $white;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #c8c8c9;
+    }
+}
+
+#content {font-size: 90%;}
+p {line-height: 1.8em; margin: 0 0 1em 0;}
+h1, h2, h3 {margin: 0.5em 0 0.5em;}
+.hidden {display: none;} 
+.clear {clear: both;}
+.pb-ajax, .pb-image, 
+.overlay iframe {font-size: 1.3em;}
+div.overlay-iframe, div.overlay-ajax {left:11%!important; width:75%;}
+.portlet img, #content img {max-width:100%;}
+
+/*Text Editor*/
+
+.ploneSkin .mceMenu table {font-size: 1.5em !Important;}
+
+dl.portlet ul.navTreeLevel0 > .navTreeItem {list-style: none;}
+
+/*header*/
+#header {background-size:100% auto;	position:relative;}
+#logo {padding: 2% 1% 0.5% 0;float: left;}
+#logo a {display:block; width:100%;}
+#portal-personaltools {font-size: 1.1em;}
+
+/* Site Actions */
+#portal-siteactions {font-size: 85%; text-align: right; display:inline; padding: 1em;} 
+#siteactions {width: 560px; float: right; padding: 1em 0; text-align: right;}
+#siteactions a {
+color: #fff !important;
+ padding:4px 6px 6px 35px;
+ background:transparent; 
+ line-height:35px;font-size:1.5em;
+ }
+
+#siteactions {
+    #siteaction-chat-now a {background: url("icons.png") no-repeat scroll 0 0 transparent;}
+    #siteaction-email a {background: url("icons.png") no-repeat scroll 0 -29px transparent;}
+    #siteaction-mycnm a {background: url("icons.png") no-repeat scroll 0 -58px transparent;}
+    #siteaction-distance-learning a {background: url("icons.png") no-repeat scroll 0 -87px transparent;}
+}
+
+/* navigation */
+#nav {
+color: $dark-blue; 
+font-weight: bold;
+padding: 0.6em 0 2em 0;
+font-size: 1.5em;
+    a {
+        color: $dark-blue; 
+        border: 1px solid #000; 
+        background: $freaking-yellow; 
+        margin: 0 -3px;
+        padding: 0.4em 0.8em; 
+        text-decoration: none;
+        float: left;
+    }
+    ul {
+        padding-top: 0; text-align: center;
+    }
+    li {
+        display: inline-block;
+    }
+}
+
+#searchbt, #nav #seletor {display:none;}
+
+/* Searchbox */
+#portal-searchbox {
+    float: right; 
+    margin: 1% 1% 0 0; 
+    width:20%; 
+    font-size: 1.3em;
+    padding: 0.3em 0;
+    background: #fff;
+    border: 1px solid $dark-blue;
+    input[name="q"], #searchGadget {
+        padding: 1.2% 0  1.1% 0;
+        margin-right: 0.6%;
+        text-indent: 2%;
+        width: 85%;
+        font-size:1.1em;
+        background: transparent;
+        border: none;
+        color: #7fa3c7;
+        font-style: italic; 
+    }
+    form, form .LSBox {
+        font-size: 100%;
+    }
+    .searchButton {
+        font-size:0.8em; 
+        width: 10%; 
+        padding:1.899% 0  1.2% 0; 
+        text-align:center;
+        text-indent: -1000em;
+        background: transparent url(search-button.png) no-repeat;
+        border: none;
+        cursor: pointer;
+    }
+}
+#LSResult {z-index:9999; margin-top: 0.5%;}
+
+/* Portlets */
+
+.portlet, .portletStaticText {border-top: 1px solid $light-blue;}
+.portlet-static-my-cnm {border-top: 0 none !Important;}
+
+#portal-column-one {	border-right: 1px solid $light-blue;}
+#portal-column-two {	border-left: 1px solid $light-blue;}
+dl.portlet dt, div.portletAssignments div.portletHeader {
+background: #fff;
+color: $dark-blue;
+font-size: 1.6em;
+font-weight: bold;
+padding: 0.8em 1em 0.4em 0;
+}
+
+
+dl.portlet li.navTreeItem a {color: $dark-blue !important; font-weight: bold;}
+dl.portlet ul.navTreeLevel0 > .navTreeItem {border: none;}
+
+#portal-column-one .managePortletsLink {margin-bottom: 55px;}
+
+/*Socials*/
+
+#social {width:960px; margin:0 auto;padding-bottom:20px;margin-top: -32px; padding-bottom: 52px;}
+#social ul {
+    border-top: 1px solid $light-blue;
+    display: block;
+    width: 280px;
+    position: absolute;
+    padding-top: 10px; 
+    padding-bottom: 25px;
+}
+
+#social ul li a {
+width:30px;
+display:block;
+height:30px;
+float:left;
+text-indent:-900000px;
+margin-bottom:25px;
+background:url(icons.png) no-repeat 0 -10px transparent;
+margin-right: 10px;
+}
+#social ul li#facebook a {background:url(icons.png) no-repeat 0 -209px transparent;}
+#social ul li#twitter a {background:url(icons.png) no-repeat 0 -178px transparent;}
+#social ul li#flickr a {background:url(icons.png) no-repeat 0 -147px transparent;}
+#social ul li#youtube a {background:url(icons.png) no-repeat 0 -117px transparent;}
+
+/* Content */
+
+#content h1.documentFirstHeading {margin-left: -12px; padding-left: 12px; border-bottom:1px solid $light-blue;}
+.portaltype-homepage #content {margin-left: -8px; padding-left: 8px;}
+img.image-left, img.image-right  {border: 4px solid $freaking-yellow; clear: both; margin: 2%;}
+
+/* Emergency */
+#emergency-content {margin: 0 auto 20px auto; width: 900px;}
+#emergency-news {background: #ff3333; text-align: center; padding: 20px; text-align: left;}
+#emergency-news h1 {color: #fff; font-size: 32px; margin: 0 0 20px 0;}
+#emergency-news p {color: #fff; margin: 0 0 10px 0;}
+#emergency-news ul {margin: 0;}
+#emergency-news li {
+display: list-item;
+line-height: auto;
+list-style: disc outside;
+color: #fff;
+margin-bottom: 0.25em;
+margin-left: 50px;
+font-size: 2em;
+}
+#emergency-news li a {font-size: 12px;}
+#emergency-news li a strong {font-size: 24px;}
+#emergency-news a, #content #emergency-news a:hover, #emergency-news a:visited {
+color: #fff !important; 
+border-bottom: none !important;
+text-decoration: underline;
+}
+
+#emergency-container {display:none;}
+
+/*Popular Box*/
+
+#popular {background:#f3f6f9;display:block;margin-top: 40px;padding:5px 10px;-moz-border-radius:10px;border-radius: 10px;}
+#popular h3 {margin-top:0;font-size:25px;margin-bottom:5px;background:url("steps.png") no-repeat scroll right 6px transparent;width:53%;}
+#popular ul li {float: left;width:45%;list-style:disc;color:$dark-blue;font-size:19px;line-height:15px; margin-right: 20px; }
+#popular ul li a {font-size:15px;border-bottom:none !Important; color:#5786b5 !Important;}
+#popular ul {margin-left:11%;}
+
+/*footer*/
+
+#footer {
+clear: left; 
+padding: 0 2em 0 2em; 
+background: #fff url(footer.png) repeat-x top center; 
+color: #000; font-size: 1.2em;
+min-height:190px;
+margin-top:18px;
+}
+#footer div {width:960px; margin: 0 auto;}
+#footer a:link {color:#fff;}
+#footer a:hover {color:#fff;}
+#footer a:visited {color:#fff;}
+
+.footer-about {text-align: right;padding-top: 15px}
+.footer-about a {margin-left: 50px; text-decoration: underline;}
+.footer-copyright {width: 32%; float: left;}
+.footer-adress {float: rigWrappeht; text-align: right;}
+
+.footer-about a:link {color:$dark-blue !important;}
+.footer-about a:hover {color:$dark-blue !important;}
+.footer-about a:visited {color:$dark-blue !important;}
+
+#footerlinks {width:63% !Important;float:right;margin-right:0!Important;}
+#footerlinks div {width:30%;float:left;color:$white;}
+#footerlinks div ul li {display:list-item !Important;}
+#footerlinks div li a:hover,
+#footerlinks div li a {text-decoration:underline;}
+#footerlinks h3 {color:$freaking-yellow;margin-top:25px;font-size:1.5em;font-weight:normal;}
+
+#logo-footer {float:left;margin-top:15px;}
+
+/*Flickr*/
+#flickr_badge_source_txt {padding:0; font: 11px Arial, Helvetica, Sans serif; color:#666666;}
+.flickr_badge_image {text-align:center !important;}
+.flickr_badge_image img {border: 1px solid black !important;}
+#flickr_www {display:block; padding:0 10px 0 10px !important; font: 11px Arial, Helvetica, Sans serif !important; color:#3993ff !important;}
+#flickr_badge_uber_wrapper a:hover,
+#flickr_badge_uber_wrapper a:link,
+#flickr_badge_uber_wrapper a:active,
+#flickr_badge_uber_wrapper a:visited {text-decoration:none !important; background:inherit !important;color:#3993ff;}
+#footer .tabs {display:none;}
+#flickr_badge_source {padding:0 !important; font: 11px Arial, Helvetica, Sans serif !important; color:#666666 !important;}
+#footer .flickr_badge_wrapper a img {border:4px solid $freaking-yellow;margin-top:-20px;height: 165px;}
+p#infophotos {color: $white;text-align: center;width: 243px;}
+p#infophotos a, p#infophotos a:visited {color:$white;text-decoration:underline;font-size:1.1em;}
+
+#plone-contentmenu-workflow .state-draft {
+    background-color: red;
+    border: 0.1em solid red;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    color: White !important;
+    padding: 0 0.5em;
+}
+
+/* Import tabview.css from YUI */
+@import "tabview";
+/* Dropdown stuff */
+@import "dropdown_menus";
+/* Custom styles for tinymce */
+@import "tiny_customs";
+/* Redmine issue reporting */
+@import "issue_form";
+
+/* Other wacky customizations */
+ul.yui-nav {
+    li {
+        margin: 0;
+    }
+}
+/* Hide stuff from the full site */
+.hide_from_full {
+	display: none;
+}

@@ -1,0 +1,89 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xml:lang="en" lang="en"
+      tal:omit-tag=""
+      metal:define-macro="controlpanel"
+      i18n:domain="plone">
+
+<metal:block use-macro="context/prefs_main_template/macros/master">
+
+<metal:block metal:fill-slot="top_slot"
+             tal:define="dummy python:request.set('disable_border', 1)" />
+<body>
+
+<div metal:fill-slot="prefs_configlet_main">
+
+  <div>
+    <h2>Google analytics profile</h2>
+    <p tal:condition="view/canModifyScript">
+      <a href="./analytics_filter/ZPythonScriptHTML_editForm">
+        Modify filtering script
+      </a>
+    </p>
+  </div>
+
+
+  <div>
+    <h2>Links</h2>
+    
+    <form action="@@cnmanalytics-controlpanel" method="post">
+
+    <table class="listing">
+      <tr>
+        <th>Blocked</th>
+        <th>Page</th>
+        <th>Page views</th>
+      <tr tal:repeat="item view/entries"
+          tal:attributes="class python:repeat['item'].odd and 'odd' or'even';
+                          style python:item['path'] in view.cnm_filtered and 'border: 1px solid red' or ''">
+        <td>
+          <input type="hidden" name="page-path"
+                 tal:attributes="value item/path" />
+          <input type="checkbox" name="page"
+                 tal:attributes="value item/path;
+                                 checked python:item['path'] in view.cnm_blocked" />
+        </td>
+        <td>
+          <a tal:attributes="href item/href" tal:content="item/title"></a>
+          <br/>
+          <tal:block content="item/href" />
+        </td>
+        <td tal:content="item/views"></td>
+      </tr>
+    </table>
+
+    <div class="formControls">
+      <input type="submit" name="save.blocked" value="Save" />
+    </div>
+    </form>
+  </div>
+
+  <div tal:condition="view/cnm_blocked">
+    <h2>Manually blocked</h2>
+    
+    <form action="@@cnmanalytics-controlpanel" method="post">
+
+      <table class="listing">
+        <tr>
+          <th></th>
+          <th>Path</th>
+        </tr>
+        <tr tal:repeat="item view/cnm_blocked">
+          <td>
+            <input type="checkbox" name="path" tal:attributes="value item" />
+          </td>
+          <td tal:content="item"></td>
+        </tr>
+      </table>
+      <div class="formControls">
+        <input type="submit" name="save.unblocked" value="Unblock" />
+      </div>
+    </form>
+  </div>
+
+</div>
+</body>
+</metal:block>
+</html>

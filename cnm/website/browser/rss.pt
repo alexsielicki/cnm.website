@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+     xmlns:tal="http://xml.zope.org/namespaces/tal">
+  <channel>
+    <title tal:content="view/title">Title</title>
+    <link tal:content="view/url">link</link>
+    <description tal:content="view/description">description</description>
+    <item tal:repeat="item view/items">
+      <title tal:content="item/title">Title</title>
+      <link tal:content="item/url">link</link>
+      <description tal:content="item/description">description</description>
+      <pubDate tal:content="item/pubdate">pubdate</pubDate>
+    </item>
+  </channel>
+</rss>

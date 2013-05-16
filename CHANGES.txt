@@ -1,0 +1,99 @@
+=======
+CHANGES
+=======
+
+0.1 (unreleased)
+----------------
+ - CNMSUP-8: Added text filter to remove general page title ugliness
+   [cnm]
+
+ - CNMSUP-17: Fix Field.FileField._make_file patch.
+   [josh]
+
+ - CNMSUP-11: Only show 'Draft Changes' for users that have permissions to
+   create the draft copy.
+   [josh]
+
+ - CNMSUP-15: Comment out patch of StrippingParser.unknown_starttag because it
+   conflicts with plone security patch.
+   [josh]
+
+ - CNMSRV-139: Register the news item with IIntIds utility if not already
+   registered.
+   [josh]
+
+ - CNMSRV-135: Send purge event for homepage when emergency notification config
+   is changed.  Purge emergency_message.json when homepage is purged.
+   [josh]
+
+ - CNMSRV-136: Add pending-deletion to review worklist so that items that are
+   pending deletion will show up on the review portlet.
+   [josh]
+
+ - CNMSRV-135: Always purge homepage when a news item is modified.  Make sure
+   modified event handler doesn't fail if a working copy is given breaking or
+   emergency priority.
+   [josh]
+
+ - CNMSRV-47: Added rss for all published news items.
+   [josh]
+
+ - CNMSRV-125: Modify permission checks for iterate info viewlets.
+   [josh]
+
+ - CNMSRV-127: Change workflow transition labels.
+   [josh]
+
+ - CNMSRV-126: Make edit view the landing page for draft changes action.
+   Change 'working copy' to 'draft copy'.
+   [josh]
+
+ - CNMSRV-47: Add 'News Item' RSS feed.
+   [josh]
+
+ - CNMSRV-99: Allow 'Reviewer' role to 'Undo Submit for Deletion'.
+   [josh]
+
+ - CNMSRV-95: Hide 'Retract' workflow transition from 'Reviewer' role.
+   [josh]
+
+ - CNMSRV-85: Add 'Delete' workflow transition.
+   [josh]
+
+ - CNMSRV-84: Add 'Draft changes' tab.
+   [josh]
+
+ - CNMSRV-83: Add red background for Draft state.
+   [josh]
+
+ - CNMSRV-60: Require Products.OpenXml.
+   [josh]
+
+ - CNMSRV-53: Add diazo theme.
+   [josh]
+
+ - CNMSRV-51: Add homepage scale.
+   [josh]
+
+ - CNMSRV-46: Make "Select News Priority" radio button and store value when
+   published on historical_news_priority property.
+   [josh]
+
+ - CNMSRV-39: Custom workflows and notifications.
+   [josh]
+
+ - CNMSRV-24: Change form name.
+   [josh]
+
+ - CNMSRV-24: Use javascript to display the emergency message.
+   [josh]
+
+ - CNMSRV-24: Add uwosh.simpleemergency dependency.  Add emergency message json
+   view.
+   [josh]
+
+ - Patch safe_html transform.
+   [josh]
+
+ - Initial checkin.
+   [josh]

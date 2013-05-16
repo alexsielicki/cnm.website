@@ -1,0 +1,30 @@
+@mixin issue-box {
+  $radius: 0.5em;
+  $grey: #F0EEEE;
+  $red: #FF4F4F;
+
+  border: solid;
+  border-color: $red;
+
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  -moz-border-radius-bottomleft: $radius;
+
+  background-color: $grey;
+
+  padding: 2%;
+  margin-right: -0.25em;
+}
+
+
+#issue_container {
+	display: none;
+	&.visible {
+		display: block;
+    @include issue-box;
+    .sub-status-image {
+      margin: auto;
+    }
+	}
+}

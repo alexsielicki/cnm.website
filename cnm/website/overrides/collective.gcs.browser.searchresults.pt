@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+<head>
+  <metal:block fill-slot="top_slot"
+               tal:define="disable_column_one python:request.set('disable_plone.leftcolumn',1);" />
+</head>
+<body>
+<div id="content-core" metal:fill-slot="main"
+                        tal:define="query python:request.get('q','');">
+    <h1 class="documentFirstHeading"
+                i18n:translate=""
+                tal:condition="not:query">
+                    Search results
+    </h1>
+    <h1 class="documentFirstHeading"
+                i18n:translate=""
+                tal:condition="query">
+                    Search results for
+                    <strong id="search-term" tal:content="query" i18n:name="term">
+                        Search Term
+                    </strong>
+    </h1>
+    <div id="cse-search-results"></div>
+    <script type="text/javascript">
+        var googleSearchIframeName = "cse-search-results";
+        var googleSearchFormName = "cse-search-box";
+        var googleSearchFrameWidth = 600;
+        var googleSearchDomain = "www.google.com";
+        var googleSearchPath = "/cse";
+    </script>
+    <script type="text/javascript" src="http://www.google.com/afsonline/show_afs_search.js"></script>
+</div>
+</body>
+</html>

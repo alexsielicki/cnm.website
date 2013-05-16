@@ -1,0 +1,44 @@
+<html metal:use-macro="here/@@standard_macros/page" i18n:domain="plone">
+
+<div id="content" metal:fill-slot="body">
+
+    <form action="#"
+        method="post"
+        tal:attributes="action string:${context/absolute_url}/@@content-cancel-checkout">
+
+      <h1 class="documentFirstHeading"
+          i18n:translate="title_cancel">
+        Delete draft of <span i18n:name="object_title" tal:content="context/Title" />.
+      </h1>
+
+      <p i18n:translate="description_cancel">
+        Are you sure you want to delete this draft of <span tal:replace="context/Title"></span>?
+        Deleting this draft will delete the page you've been working on and all
+        modifications will be lost. It will not delete the page currently published
+        on the website.
+      </p>
+
+      <div class="formControls">
+
+        <input
+            class="destructive"
+            type="submit"
+            name="form.button.Cancel"
+            value="Yes, delete this draft"
+            i18n:attributes="value"
+            />
+
+        <input
+            class="standalone"
+            type="submit"
+            name="form.button.Keep"
+            value="No! Don't delete this draft."
+            i18n:attributes="value"
+            />
+
+      </div>
+
+    </form>
+</div>
+
+</html>

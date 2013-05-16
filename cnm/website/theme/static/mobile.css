@@ -1,0 +1,480 @@
+body {
+    background-color: #004890;
+}
+#main-wrapper {
+    background-image: none;
+    background-color: transparent;
+}
+#main {
+    background-color: transparent;
+    padding: 0;
+}
+#content {
+    margin: 20px 0 0 0;
+    padding: 0 10px 10px 10px;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+}
+.portaltype-homepage #content {
+    background-color: transparent;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+/* Hiding things */
+.portlet-static-featured-at-cnm,
+.portlet-static-mycnm,
+#social,
+#footerlinks,
+#flickr_badge_wrapper,
+#infophotos,
+#logo-footer,
+.frontpage-news .description,
+.frontpage-news .readMore,
+#portal-breadcrumbs,
+.portlet-static-get-started,
+.portletRss
+{
+    display: none;
+}
+/* Certain hidden things need to be displayed on the homepage */
+.portaltype-homepage .portlet-static-get-started,
+.portaltype-homepage .portletRss
+{
+    display: block
+}
+/* hiding Live search results forever */
+#LSResult {
+    display: none !important;
+}
+
+#wrapper,
+#footer div
+{
+    margin: 0 5px;
+    width: auto;
+}
+
+#header
+{
+    position: static;
+}
+#main-wrapper {
+    position: relative;
+}
+
+/* Logo */
+#logo {
+    padding: 0;
+}
+#logo img {
+    display: none;
+}
+#logo a {
+    height: 70px;
+    width: 140px;
+    background-image: url(logo-left.png);
+    background-repeat: no-repeat;
+    background-size: auto 70px;
+    background-position: -18px top;
+}
+p.hiddenStructure a[accesskey="6"] {
+    display: block;
+    color: white;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-image: url(cnm-mobile-menu.png);
+    width: 86px;
+    height: 27px;
+    text-indent: -2000px;
+}
+
+/* Search */
+#portal-searchbox {
+    display: block;
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #D8E4FE, #A5B3D6);
+    /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+    background-image: -webkit-linear-gradient(top, #D8E4FE, #A5B3D6); 
+    clear: both;
+    height: 40px;
+    font-size: 13px;
+    border-width: 0;
+    position: absolute;
+    left: 0px;
+    bottom: -80px; 
+}
+#portal-searchbox #portal-advanced-search {
+    display: none;
+}
+#portal-searchbox form {
+    padding-top: 1px; /* need this to make "#portal-searchbox form .LSBox" top margin work */
+}
+#portal-searchbox form .LSBox {
+    background-color: white;
+    margin: 4px 10px 4px 10px;
+    border: 1px solid #AEBBE8;
+    border-radius: 5px;
+}
+#portal-searchbox input[name="q"], #portal-searchbox #searchGadget {
+    background-color: transparent;
+    padding: 0px 0px 0px 10px;
+    margin: 0;
+    text-indent: inherit;
+    height: 28px;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+#portal-searchbox .searchButton {
+    padding: 0;
+    margin: 0;
+    height: 23px;
+    width: 30px;
+    display: none;
+}
+
+/* Actions */
+#siteactions {
+    float: none;
+    width: 100%;
+    position: absolute;
+    background-color: #004890;
+    bottom: -40px;
+    left: 0px;
+    z-index: 50000;
+    padding: 0;
+}
+
+#portal-siteactions {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-top: 5px solid white;
+}
+#portal-siteactions li {
+    display: inline-block;
+    margin: 0;
+    width: 33%;
+    text-align: center;
+}
+#portal-siteactions li#siteaction-chat-now {
+    width: 39%;
+}
+#portal-siteactions li#siteaction-mycnm {
+    width: 25%;
+}
+#portal-siteactions li#siteaction-distance-learning {
+    width: 33%;
+}
+#portal-siteactions li a {
+    display: block;
+    background-image: none !important;
+    padding: 0;
+    border-right: 5px solid white;
+}
+#portal-siteactions li:last-child a {
+    border-right-width: 0px;
+}
+
+/* Popular */
+#popular {
+    background-color: white;
+    padding: 0;
+    border-radius: 10px 10px 0px 0px;
+    margin-top: 20px;
+}
+#popular h3 {
+    background-image: none;
+    font-size: 16px;
+    color: black;
+    width: auto;
+    margin: 0;
+    padding: 0 10px;
+    line-height: 30px;
+}
+#popular ul {
+    margin-left: 0;
+}
+#popular ul li {
+    float: none;
+    width: auto;
+    margin: 0;
+    line-height: 40px;
+    min-height: 40px;
+    border-top: 1px solid #B8B9D2;
+    font-size: inherit;
+    background-image: url(cnm-mobile-logoico.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 20px;
+}
+#popular ul li a {
+    display: block;
+    padding: 10px 40px 10px 40px;
+    font-size: inherit;
+    color: black !important;
+    line-height: 1.3em;
+    background-image: url(cnm-dot.png);
+    background-repeat: no-repeat;
+    background-position: 16px center;
+    /*background-size: auto 4px;*/
+}
+
+/* Nav */
+#portal-globalnav {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0px;
+    bottom: -348px; /* The search box is behind this, should be -348px for optimal alignment but iOS requires the height set for this to work. */
+    z-index: auto;
+    height: 267px;
+    overflow: hidden;
+}
+#portal-globalnav ul.submenu {
+    display: none !important;
+}
+#portal-globalnav li,
+#portal-globalnav li a
+{
+    float: none;
+}
+#portal-globalnav li a {
+    text-transform: uppercase;
+    margin: 0;
+    border-width: 1px 0;
+}
+#portal-globalnav li a:hover {
+    color: inherit;
+    background-color: #FBD10B;
+}
+#portal-globalnav .selected a:hover {
+    background-color: #205C90;
+    color: White;
+}
+#portal-globalnav #portaltab-index_html a {
+    width: auto;
+}
+
+/* Footer */
+#footer {
+    background-image: none;
+    background-color: #ECEDFA;
+    padding: 0 0 1px 0;
+    min-height: auto;
+    margin-top: 341px; /* Makes space for absolute positioned elements. Should be changed alongside the position of portal-globalnav */
+}
+#footer a:link {
+    color: #004890;
+}
+.footer-copyright {
+    float: none;
+    width: auto;
+}
+.footer-adress,
+.footer-about
+{
+    text-align: left;
+}
+.footer-about a:first-child {
+    margin-left: 0;
+}
+
+#portal-column-content,
+#portal-column-one {
+    float: none;
+    width: auto;
+    left: auto;
+    margin-left: auto;
+}
+#portal-column-one {
+    height: auto !important;
+    border-width: 0;
+    padding: 0;
+}
+
+/* News */
+.frontpage-news,
+.viewAllCNMNews
+{
+    background-color: white;
+    border-top: 1px solid #B8B9D2;
+    background-image: url(cnm-mobile-logoico.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 20px;
+}
+.viewAllCNMNews {
+    margin: 0 !important;
+    line-height: 40px;
+}
+.viewAllCNMNews a {
+    display: block;
+    padding: 0 10px;
+    color: black !important;
+}
+.frontpage-news p {
+    margin: 0 !important;
+}
+.frontpage-news p img {
+    border-width: 0;
+    margin: 5px 5px 5px 10px;
+    max-width: 45px !important;
+    max-height: 30px;
+    position: absolute;
+}
+.frontpage-news h2 {
+    font-size: 100%;
+    letter-spacing: normal;
+    font-weight: normal;
+    margin: 0;
+    font-family: inherit;
+    min-height: 40px;
+    background-image: url(cnm-mobile-logoico.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 20px;
+}
+.frontpage-news h2 a {
+    display: block;
+    line-height: 1.3em;
+    padding: 10px 40px 10px 65px;
+    color: black !important;
+}
+.portaltype-homepage .viewAllCNMNews {
+    text-align: left !important;
+}
+
+/* Portlets */
+dl.portlet {
+    border-width: 0;
+    border-radius: 10px 10px 0px 0px;
+    margin-top: 20px;
+    background-color: white;
+}
+dl.portlet dt {
+    padding: 0;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    line-height: 35px;
+    background-color: transparent;
+}
+dl.portlet dt a {
+    padding: 0px 10px;
+}
+dl.portlet dd.portletItem,
+dl.portlet dd.portletFooter
+{
+    padding: 0;
+    min-height: 40px;
+    background-image: url(cnm-mobile-logoico.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 20px;
+}
+dl.portlet dd.portletItem a,
+dl.portlet dd.portletFooter a
+{
+    display: block;
+    line-height: 1.3em;
+    padding: 10px 40px 10px 40px;
+    border-top: 1px solid #B8B9D2;
+    font-family: 'Open Sans',sans-serif;
+    color: black;
+    font-weight: normal;
+}
+dl.portlet dd.portletItem h4 br {
+    display: none;
+}
+
+/* Get Started */
+.portlet-static-get-started {
+    background-color: white;
+}
+dl.portlet-static-get-started dd.portletItem {
+    background-image: none;
+}
+dl.portlet-static-get-started dd.portletItem a {
+    background-image: url(cnm-mobile-logoico.png), url(cnm-dot.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right center, 16px center;
+    background-size: auto 20px, auto;
+}
+
+/* Events */
+.portaltype-homepage .portletRss {
+    background-color: white;
+}
+.portaltype-homepage .portletRss dd a {
+    font-size: 1.125em;
+}
+.portaltype-homepage .portletRss dd .portletItemDetails {
+    display: none;
+}
+.portaltype-homepage .portletRss dd.portletItem a {
+    background-image: url(cnm-mobile-calendarico.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: auto 20px;
+}
+
+/* Get rid of link underlines */
+#content a:link {
+    text-decoration: none;
+}
+#content a:link, dl.portlet a:link {
+    border-bottom-width: 0;
+}
+#content a:hover, 
+dl.portlet a:hover,
+dl.portlet dt a:link, 
+dl.portlet dt a:visited, 
+dl.portlet dt a:hover
+{
+    color: black !important;
+}
+
+/* Content Pages */
+#content h1.documentFirstHeading {
+    margin: 0 0 12px 0;
+    padding: 0;
+}
+.rightcolumn, 
+.pullquote
+{
+    float: none;
+}
+#content-core img[style*="float: right"]{
+    float: none !important;
+}
+
+/* Nav Tree */
+dl.portletNavigationTree {
+    background-color: transparent;
+}
+dl.portletNavigationTree dd.portletItem {
+    background-image: none;
+}
+dl.portlet li.navTreeItem a {
+    color: white !important;
+    text-transform: uppercase;
+    padding-left: 10px 20px;
+    border-top: 1px solid white !important;
+    margin: 0px -4px;
+}
+dl.portletNavigationTree ul.navTree li.navTreeItem {
+    margin: 0;
+    padding: 0;
+}
+#cse-search-results iframe {
+    width:310px;
+}
+.hide_from_full {
+    display: inherit;
+}

@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xml:lang="en" lang="en"
+      tal:omit-tag=""
+      metal:define-macro="controlpanel"
+      i18n:domain="plone">
+
+<metal:block use-macro="context/prefs_main_template/macros/master">
+
+<metal:block metal:fill-slot="top_slot"
+             tal:define="dummy python:request.set('disable_border', 1)" />
+<body>
+
+<div metal:fill-slot="prefs_configlet_main">
+
+    <div tal:define="auth_uri view/auth_uri;
+        stored_credentials view/stored_credentials;
+        results view/results|nothing;
+        credentials view/credentials">
+    <h2>Google OAuth2</h2>
+
+    Redirect
+    <a href="" tal:attributes="href view/auth_uri" 
+        tal:content="view/auth_uri">http://googleapi</a>
+    <a href="https://accounts.google.com/o/oauth2/revoke?token={refresh_token}"
+        tal:condition="not: auth_uri">
+    </a>
+    Stored
+    <div tal:content="view/stored_credentials"></div>
+    Query results
+    <div tal:content="view/results|nothing"></div>
+    New creds
+    <div tal:content="view/credentials"></div>
+  </div>
+
+</div>
+</body>
+</metal:block>
+</html>

@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xml:lang="en" lang="en"
+      tal:omit-tag=""
+      metal:define-macro="controlpanel"
+      i18n:domain="plone">
+
+<metal:block use-macro="context/main_template/macros/master">
+<body>
+
+<div metal:fill-slot="main">
+    <tal:block repeat="ni python:view.get_news()[:2]">
+  <div class="frontpage-news">
+  <p>
+  <img class="image-left" src="string:${ni/item/absolute_url}/image_mini" 
+    tal:condition="ni/img|nothing"
+    tal:attributes="src ni/img/absolute_url"/>
+  <img class="image-left" src="++theme++cnm.website/static/no-image-placeholder.gif"
+    tal:condition="not:ni/img|nothing"/>
+  </p>
+  <h2><a class="internal-link" href="#" tal:attributes="href ni/item/absolute_url"
+       tal:content="ni/item/Title">Lorem ipsum dolor sit
+      amet, consectetur adipiscing elit.</a></h2>
+  <p tal:condition="ni/br|nothing"><img src="++theme++cnm.website/static/breaking-news.png"></p>
+  <p tal:content="ni/item/Description" class="description">Fusce sit amet molestie leurabitur mattis est eget velit vehicula in tincidunt diam bibendum teger dictum venenatis tempusn vel orci erat.</p>
+  <p style="text-align: right; " class="readMore">
+  <a class="internal-link" href="news" tal:attributes="href ni/item/absolute_url">Read More</a></p>
+  <div class="clear"></div>
+  </div>
+  </tal:block>
+  <p style="text-align: right; " class="viewAllCNMNews"><a href="/news" class="internal-link">View all CNM News</a></p>
+  <div id="popular">
+    <h3>Most Popular Now</h3>
+    <ul>
+        <li tal:repeat="item python:view.entries[:10]">
+        <a tal:attributes="href item/href" tal:content="item/title"></a>
+      </li>
+  </ul>
+    <div class="clear"></div>
+  </div>
+  
+</div>
+</body>
+</metal:block>
+</html>

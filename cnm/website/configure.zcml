@@ -1,0 +1,40 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="cnm">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <permission id="cnm.news.priority" title="CNM: News Priority">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+    </permission>
+
+    <include file="profiles.zcml" />
+    <include package=".browser" />
+    <include package=".content" />
+
+    <adapter factory=".newsitem.NewsItemExtender" />
+
+    <subscriber handler=".newsitem.onCreate" />
+    <subscriber handler=".newsitem.onModify" />
+
+    <subscriber handler=".newsitem.afterTransitionHandler" />
+
+    <include package="z3c.jbot" file="meta.zcml" />
+    <browser:jbot directory="overrides" />
+    <browser:jbot directory="browser/template_overrides" />
+
+    <plone:static
+        type="theme" directory="theme" />
+
+    <adapter factory=".purge.HomepagePurgePaths" name="plone.content" />
+
+    <subscriber
+        for="uwosh.simpleemergency.interfaces.ISimpleEmergencyModifiedEvent"
+        handler=".purge.purgeOnEmergencyConfigChange" />
+
+</configure>

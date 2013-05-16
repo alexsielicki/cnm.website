@@ -1,0 +1,18 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <utility
+      name="cnm-newsItems1"
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      component=".homepage.newsVoc1" />
+
+  <utility
+      name="cnm-newsItems2"
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      component=".homepage.newsVoc2" />
+
+  <utility
+      name="cnm-newsItems3"
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      component=".homepage.newsVoc3" />
+
+</configure>

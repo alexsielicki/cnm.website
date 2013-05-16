@@ -1,0 +1,47 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:z3c="http://namespaces.zope.org/z3c"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+    <browser:page
+        for="*"
+        name="iterate_control"
+        class=".browser.iterate_control.Control"
+        permission="zope2.View"
+        allowed_attributes="checkin_allowed checkout_allowed cancel_allowed is_working_copy"
+        />
+
+    <z3c:widgetTemplate
+      mode="input"
+      widget="z3c.form.interfaces.IOrderedSelectWidget"
+      layer="z3c.form.interfaces.IFormLayer"
+      template="overrides/orderedselect_input.pt"
+      />
+
+    <browser:page
+        for="plone.app.iterate.interfaces.IIterateAware"
+        name="content-checkout"
+        class=".browser.checkout.Checkout"
+        template="browser/checkout.pt"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.app.iterate.baseline_info"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+        class=".browser.info.BaselineInfoViewlet"
+        permission="zope2.View"
+        for="plone.app.iterate.interfaces.IBaseline"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        />
+
+    <browser:viewlet
+        name="plone.app.iterate.checkout_info"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+        class=".browser.info.CheckoutInfoViewlet"
+        permission="zope2.View"
+        for="plone.app.iterate.interfaces.IWorkingCopy"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        />
+
+</configure>
